@@ -27,12 +27,12 @@
           <h1 class="text-success text-center">To-Do List</h1>
           <div class="mb-3">
             <div class="row">
-              <label for="" class="form-label text-center fw-bold text-success">Your Tasks</label>
+              <label for="inputEl" class="form-label text-center fw-bold text-success">Your Tasks</label>
               <div class="col d-flex justify-content-center gap-2">
                 <input type="text"
                   class="form-control form-control-sm w-50 shadow"
-                  name=""
-                  id=""
+                  name="inputEl"
+                  id="inputEl"
                   aria-describedby="helpId"
                   placeholder="*Add your personal Tasks"
                   v-model="todoText"
@@ -45,7 +45,7 @@
         <main class="pt-4 d-flex justify-content-center">
             <ul class="list-group w70 shadow" v-if="tasks.length > 0">
                 <li class="list-group-item d-flex justify-content-between" v-for="(todo,index) in tasks" :key="todo.id">
-                    <span class="fw-bold point">{{tasks[0].text}}</span>
+                    <span class="fw-bold point" :class="{'done': todo.done}" @click="markAsDone(todo)">{{'todoText'}}</span>
                     <i class="fa-solid fa-trash point"></i>
                 </li>
                <div class="v-else">
