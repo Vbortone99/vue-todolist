@@ -35,6 +35,7 @@
                   id=""
                   aria-describedby="helpId"
                   placeholder="*Add your personal Tasks"
+                  v-model="todoText"
                 />
                 <button class="btn btn-success shadow">+</button>
               </div>
@@ -42,19 +43,14 @@
           </div>
         </header>
         <main class="pt-4 d-flex justify-content-center">
-            <ul class="list-group w70 shadow">
-                <li class="list-group-item d-flex justify-content-between">
-                    <span class="fw-bold point">{{}}</span>
+            <ul class="list-group w70 shadow" v-if="tasks.length > 0">
+                <li class="list-group-item d-flex justify-content-between" v-for="(todo,index) in tasks" :key="todo.id">
+                    <span class="fw-bold point">{{tasks[0].text}}</span>
                     <i class="fa-solid fa-trash point"></i>
                 </li>
-                <li class="list-group-item d-flex justify-content-between">
-                    <span class="fw-bold point">Item</span>
-                    <i class="fa-solid fa-trash point"></i>
-                </li>
-                <li class="list-group-item d-flex justify-content-between">
-                    <span class="fw-bold point">item</span>
-                    <i class="fa-solid fa-trash point"></i>
-                </li>
+               <div class="v-else">
+                <h3>Non hai task</h3>
+               </div>
             </ul>
         </main>
       </div>

@@ -1,4 +1,4 @@
-const createApp = Vue;
+const {createApp} = Vue;
 createApp({
     data(){
         return{
@@ -18,13 +18,11 @@ createApp({
                     text:'Finisci la lezione',
                     done:false,
                 },
-            ]
+            ],
+            lastId:3,
+            todoText:'',
         }
     },
-    lastId:3,
-    todoText:'',
-    methods(){
-
-    }
+    
 }).mount('#app')
 
