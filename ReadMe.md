@@ -2,9 +2,9 @@
 # Rifare l'esercizio della to do list.
 
 1. Ogni todo sarà un oggetto, formato da tre proprietà:
-    `text`, una stringa che indica il testo del todo
-    `done`, un booleano (true/false) che indica se il todo è stato fatto oppure no
-     id, un numero intero positivo incrementale  (univoco per ogni task)
+    • `text`, una stringa che indica il testo del todo
+    • `done`, un booleano (true/false) che indica se il todo è stato fatto oppure no.
+    • `id`, un numero intero positivo incrementale  (univoco per ogni task)
 
 # MILESTONES
 
