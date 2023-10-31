@@ -1,0 +1,10 @@
+.w70{
+    width: 70%;
+}
+.point:hover{
+    cursor: pointer;
+    text-shadow: 2px 2px 10px grey;
+}
+.shadow{
+    box-shadow: 0px 0px 10px black;
+}
