@@ -48,10 +48,10 @@
                     <span class="fw-bold point" :class="{'done': todo.done}" @click="markAsDone(todo)">{{todo.text}}</span>
                     <i class="fa-solid fa-trash point" @click="removeTask"></i>
                 </li>
-               <div class="v-else">
-                <h3>Non hai task</h3>
-               </div>
             </ul>
+            <div v-else>
+                <h3 class="text-success fw-bold">Non hai Tasks</h3>
+            </div>
         </main>
       </div>
     </div>
