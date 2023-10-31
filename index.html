@@ -37,16 +37,16 @@
                   placeholder="*Add your personal Tasks"
                   v-model="todoText"
                 />
-                <button class="btn btn-success shadow">+</button>
+                <button class="btn btn-success shadow" @click="addTask">+</button>
               </div>
             </div>
           </div>
         </header>
         <main class="pt-4 d-flex justify-content-center">
             <ul class="list-group w70 shadow" v-if="tasks.length > 0">
-                <li class="list-group-item d-flex justify-content-between" v-for="(todo,index) in tasks" :key="todo.id">
-                    <span class="fw-bold point" :class="{'done': todo.done}" @click="markAsDone(todo)">{{'todoText'}}</span>
-                    <i class="fa-solid fa-trash point"></i>
+                <li class="list-group-item d-flex justify-content-between" v-for="(todo,id) in tasks" :key="todo.id">
+                    <span class="fw-bold point" :class="{'done': todo.done}" @click="markAsDone(todo)">{{todo.text}}</span>
+                    <i class="fa-solid fa-trash point" @click="removeTask"></i>
                 </li>
                <div class="v-else">
                 <h3>Non hai task</h3>
