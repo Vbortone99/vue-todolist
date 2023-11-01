@@ -36,6 +36,7 @@
                   aria-describedby="helpId"
                   placeholder="*Add your personal Tasks"
                   v-model="todoText"
+                  @keyUp="Enter"
                 />
                 <button class="btn btn-success shadow" @click="addTask">+</button>
               </div>

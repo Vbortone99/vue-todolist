@@ -4,6 +4,8 @@
 .point:hover{
     cursor: pointer;
     text-shadow: 2px 2px 10px grey;
+    transition:  ease-in-out 0.4s;
+    transform: scale(1.1);
 }
 .shadow{
     box-shadow: 0px 0px 10px black;
